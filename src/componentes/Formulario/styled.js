@@ -3,10 +3,13 @@ import styled from "styled-components";
 export const BoxFormulario = styled.form`
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    height: 75vh;
+    gap: 20px;
+    height: 30%;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    margin-top: 5%;
+    
 `
 
 export const InputFormulario = styled.input`

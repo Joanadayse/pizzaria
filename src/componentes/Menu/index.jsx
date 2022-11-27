@@ -1,16 +1,22 @@
 import React from 'react'
-import { Titulo, MenuCards } from './styled'
+import { DivMenu, MenuCards} from './styled'
 import Card from "../Card"
+import Button from '../Button'
 
-const Menu = () => {
-    return (
-        <>
-            <Titulo>MENU</Titulo>
-            <MenuCards>    
-                <Card />
-            </MenuCards>
-        </>
-    )
+const Menu = (props) => {
+    return <>
+    <DivMenu> <h3>Menu:</h3></DivMenu>
+    <MenuCards>
+        <Card pizza={props.pizza1}/>
+        <Card pizza={props.pizza2}/>
+        <Card pizza={props.pizza3}/>
+    </MenuCards>
+ <Button setPagina1={props.setPagina}/>
+</>
+
+
 }
 
 export default Menu
+
+// o menu envia para o Card (seu filho)

@@ -2,18 +2,20 @@ import React from "react"
 import Button from "../Button"
 import { CardEstilizado, TextoH4, ImagemCard, TextoValor, TextoParagrafo, Etiqueta, CheckBox } from "./styled"
 
-const Card = () => {
+const Card = (props) => {
+
+   
 
     return (
         <div>
             <CardEstilizado>
                 <TextoParagrafo>Sabor:</TextoParagrafo>
 
-                <TextoH4></TextoH4>
+                <TextoH4>{props.pizza.sabor}</TextoH4>
 
-                <ImagemCard src="" />
+                <ImagemCard src={props.pizza.imagem}/>
 
-                <TextoValor>Preço:</TextoValor>
+                <TextoValor>Preço: {props.pizza.preco}</TextoValor>
 
                 <TextoParagrafo>Tamanho:</TextoParagrafo>
 
@@ -36,9 +38,12 @@ const Card = () => {
                 </CheckBox>
 
             </CardEstilizado>
-            <Button />
+            {/* <Button /> */}
         </div>
     )
 }
 
 export default Card
+
+
+// o Card recebe do Menu (pai de Card e filho de App)

@@ -2,14 +2,16 @@ import React from "react";
 import './styled.js'
 import { Botao } from "./styled.js";
 
-const Button = () => {
+const Button = ({ setPagina1}) => {
 
-    function adicionaCarrinho() {
-        alert('Sua pizza já vai começar a ser preparada.')
-    }
+   
+    const mudarDeTela=(pagina)=>{
+        setPagina1(pagina)
+      
+      }
 
     return (
-        <Botao onClick="">Adicionar</Botao>
+        <Botao onClick={()=>mudarDeTela(2)}>Adicionar e Continuar</Botao>
     )
 }
 
